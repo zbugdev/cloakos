@@ -5,6 +5,7 @@
 <p align="left">
   A simplistic, modern web-based operating system.
 </p>
+
 ## Features
 - Search Engine
 - Games
@@ -12,10 +13,12 @@
 - Music Player
 - Movies & TV
 - And more!
+- 
 ## Preview
 <p align="center">
   <i>Screenshots coming soon.</i>
 </p>
+
 ## Links
 - **Website:** [CloakOS](https://zbugdev.github.io/cloakos/)
 - **Repository:** [GitHub](https://github.com/zbugdev/cloakos)
