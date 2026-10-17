@@ -13,7 +13,7 @@
 - Music Player
 - Movies & TV
 - And more!
-- 
+
 ## Preview
 <p align="center">
   <i>Screenshots coming soon.</i>
