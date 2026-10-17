@@ -1,20 +1,38 @@
-# Cloak OS
+# ◈ Cloak OS
 
 <p align="center">
-  <img src="https://img.shields.io/badge/CLOAK_OS-0a0a0a?style=for-the-badge&logo=ghost&logoColor=00ff9c" />
-  <img src="https://img.shields.io/badge/STATUS-IN_DEVELOPMENT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=00ff9c" />
+  <img src="https://img.shields.io/badge/CLOAK_OS-0a0a0a?style=for-the-badge&logo=ghost&logoColor=00ff9c" alt="Cloak OS" />
+  <img src="https://img.shields.io/badge/STATUS-IN_DEVELOPMENT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=00ff9c" alt="In development" />
 </p>
 
-A simple, modern OS experience.
+<p align="center">
+  A simple, modern OS experience.
+</p>
+
+---
 
 ## Features
-- Search Engine
-- Unblocked Games
-- AI Chatbot
-- Music Player
+
+- Search engine
+- Unblocked games
+- AI chatbot
+- Music player
 - Movies & TV
-- & More
+- And more
+
+## Preview
+
+<p align="center">
+  <i>Screenshots coming soon.</i>
+</p>
 
 ## Links
-- Website: [Cloak OS](YOUR_WEBSITE_URL)
-- GitHub: [Repository](YOUR_REPOSITORY_URL)
+
+- **Website:** [Cloak OS](YOUR_WEBSITE_URL)
+- **Repository:** [GitHub](https://github.com/zbugdev/cloakos)
+
+---
+
+<p align="center">
+  <sub>© 2026 Cloak OS</sub>
+</p>
