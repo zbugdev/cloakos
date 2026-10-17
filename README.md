@@ -1,8 +1,7 @@
 # Cloak OS
 
 <p align="center">
-  <img src="https://img.shields.io/badge/CLOAK_OS-0a0a0a?style=for-the-badge&logo=ghost&logoColor=00ff9c" alt="Cloak OS" />
-  <img src="https://img.shields.io/badge/STATUS-IN_DEVELOPMENT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=00ff9c" alt="In development" />
+  <img src="https://img.shields.io/badge/Status-In%20Development-orange"/>
 </p>
 
 <p align="center">
