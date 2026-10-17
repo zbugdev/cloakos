@@ -28,8 +28,9 @@
 
 ## Links
 
-- **Website:** [Cloak OS](YOUR_WEBSITE_URL)
+- **Website:** [Cloak OS](https://google.com)
 - **Repository:** [GitHub](https://github.com/zbugdev/cloakos)
+- **Discord:** [Discord](https://discord.com)
 
 ---
 
