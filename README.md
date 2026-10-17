@@ -1,4 +1,4 @@
-# ◈ Cloak OS
+# Cloak OS
 
 <p align="center">
   <img src="https://img.shields.io/badge/CLOAK_OS-0a0a0a?style=for-the-badge&logo=ghost&logoColor=00ff9c" alt="Cloak OS" />
