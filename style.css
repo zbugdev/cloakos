@@ -1,0 +1,25 @@
+body {
+    background-image: url('');
+}
+.desktop-shortcut {
+    margin: 30px;
+    position: relative;
+    border-radius: 15px;
+    width: 62.5px;
+    height: 62.5px;
+    background:
+        linear-gradient(to bottom, transparent, #00007f7f),
+        var(--icon) center / cover;
+}
+.desktop-shortcut::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #bfffff7f, transparent, transparent, transparent, #bfffff7f) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
