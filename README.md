@@ -1,11 +1,9 @@
-# Cloak OS
-
+# CloakOS
 <p align="center">
   <img src="https://img.shields.io/badge/Status-In%20Development-orange"/>
 </p>
-
 <p align="center">
-  A simple, modern OS experience.
+  A simplistic, modern web-based operating system.
 </p>
 
 ---
