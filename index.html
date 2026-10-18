@@ -2,14 +2,92 @@
 <html lang="en-US" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"/>
-        <title>CloakOS</title>
-        <link rel="stylesheet" href="style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+        <meta name="text-scale" content="scale"/>
+        <title>Cloak</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+            }
+            .topbar {
+                background-color: #d3e3fd;
+                height: 85px;
+            }
+            .minimize, .restore, .close {
+                position: static;
+                background-color: transparent;
+                border: transparent;
+                width: 45px;
+                height: 39px;
+                transition: background-color 0.15s ease-in-out;
+                flex-shrink: 0;
+            }
+            .minimize {
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAnCAYAAACbgcH8AAAAi0lEQVR4AezSUQqAQAwDUfX+d9aeIEQ6CMLI7ldDLE+v44ePS3/10ZRWOgj4ewQcdKQ0yhnKlA446EhplDOUKR1w0JHSKGcoo6TveUdzJ7Y/1NLnrNLcie0PtfR+kxcNLl1hASGlAcSqQumKCQgpDSBWFUpXTEBIaQCxqlC6YgJCSgOIVYXSFRMQegAAAP//StwhjwAAAAZJREFUAwBiNApPGKOtIQAAAABJRU5ErkJggg==');
+            }
+            .restore {
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAnCAYAAACbgcH8AAAA4ElEQVR4AeyVwQ3CMBAEDaVQCuJHJ1ABhcAH2oAXDVAV2fvdJxc/RlYibXQbnbTReTWx7H3b4OPQo36aSZt0QcDbo4CDWiaN4iyGmXQBB7VMGsVZDKNJX7XWW/onfdW/pIOEFB36rlRnaZd0Uv+TbhJSVOgIm+nmPryn0q6O9EWhMt3chye7HeNFiCJNZOme4dALqD4Lfrc9kvQmQ8cp0lo3z/kPKdIPLZGPudyHJ5srKnTchPmYy314XGJNokJr1Lhy6FGsTdqkCwLeHgUc1DJpFGcxzKQLOKhl0ijOYtgEAAD//4cYQ2oAAAAGSURBVAMAmgEbTyoIlwIAAAAASUVORK5CYII=');
+            }
+            .close {
+                position: relative;
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAnCAYAAACbgcH8AAABIElEQVR4AeyTS4oCMRRFm95D08vpSS+hGz9TJ65MRd2BKLgeHegGxHOFAimtEHlXQXjyrhWSVHI4lXx+vOEvoV/10dJ0mi4YyONRkGMdStNWnYXF0nRBjnUoTVt1FhZzmd6zxy/pKo3tugYf7XdB99h4Sn5Iu9Q3ofOPWMoFvYamT5ZEkDwupfaC1j/ZEku5oAXTBn8KsDZyQms9gQ9pyLgyoG0zzFqXckNr0RN/R3IgTyk3tI6ELuQI2jGZEfXx8JUTWnDXl05H5d7lDNO7oNvADdgteDMSeLqg5zDI6r1LJ/DmcjItXi7ob1A2pKtWDHwRS7mgLTC1iyR0ranovDQdNVj7fpquNRWdl6ajBmvfT9O1pqLz0nTUYO37b2n6DAAA//+Tmor7AAAABklEQVQDAGXDI09xuW8mAAAAAElFTkSuQmCC');
+            }
+            .close::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAnCAYAAACbgcH8AAABM0lEQVR4AeyTUWoCMRCGs71D6XH60iO01PbVF0+mot5AFDyPPugFXL9IVlh1Q5b5FYSR+UmcmSQf/yZv4QV/Dv2sj+ZOu9MZB/x6ZMyRltxpqZ2ZzdzpjDnSkjsttTOzmcTpuq536KvrnFhD265637wEmkN/0QSwT8ZWpNyY5DeShAS6qqoVNAO0SJBMQ0jzOX9+6NkwSkICHUmAaoE/CjieJYOOmyXwf+aLpD9yMofZ8xxS6POOIRwZD2iPHhJS6HQlJpAO0QhNU46pLmTQCe7y6LgWrTuuQw5BAn0N3ADeBW+KhlECzfkzNADy5tGRi443j5M2e0igAftA6y4cakv03lXvm5dA9z3U2u/QVgdL17vTpU5Z+9xpq4Ol693pUqesfe601cHS9e50qVPWvpd0+gQAAP//No2MtAAAAAZJREFUAwCHelNP6H9a/AAAAABJRU5ErkJggg==');
+                background-position: center;
+                background-repeat: no-repeat;
+                opacity: 0;
+                pointer-events: none;
+                background-size: 45px 39px;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: opacity 0.15s ease-in-out;
+            }
+            .minimize:hover, .restore:hover {
+                background-color: #bdcce3;
+            }
+            .close:hover {
+                background-color: #e81123;
+            }
+            .close:hover::after {
+                opacity: 1;
+            }
+            .window-control {
+                gap: 1px;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .search-bar {
+                position: fixed;
+                background-color: #ffffff;
+                width: 100%;
+                height: 46px;
+                top: 39px;
+                border-radius: 8px 8px 0 0;
+            }
+        </style>
     </head>
     <body>
-        <div class="desktop">
-            <div class="desktop-shortcut" style="--icon: url('https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg')"></div>
-            <div class="desktop-shortcut" style="--icon: url('https://img.magnific.com/premium-vector/tik-tok-logo_578229-290.jpg?semt=ais_hybrid&w=740&q=80')"></div>
+        <div class="topbar">
+            <div class="search-bar">
+                
+            </div>
+            <div class="window-control">
+                <button class="minimize"></button>
+                <button class="restore"></button>
+                <button class="close"></button>
+            </div>
         </div>
+        <script>
+            document.addEventListener("visibilitychange", () => {
+                const Topbar = document.querySelector(".topbar");
+                if (Topbar) {
+                    Topbar.style.backgroundColor = document.hidden ? "#dde3e9" : "#d3e3fd";
+                }
+            });
+        </script>
     </body>
 </html>
